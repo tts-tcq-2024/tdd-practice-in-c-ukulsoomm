@@ -4,3 +4,7 @@ int Add_EmptyStringInput(const char* input){
   }
   return -1; 
 }
+
+int Add_GreaterThan1000Input(int input){
+  if(input > 1000){
+    return
