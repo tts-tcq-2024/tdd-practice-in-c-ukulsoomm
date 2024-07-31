@@ -42,3 +42,8 @@ TEST(StringCalculatorAddTests, ExpectSumWithCustomDelimiter) {
     int result = add(input);
     ASSERT_EQ(result, expectedresult);
 }
+
+TEST(ExceptionHandlingTest, NegativeNumberException) {
+    const char* input = "-1,2,3";
+    ASSERT_THROW(add(input), std::runtime_error);
+}
