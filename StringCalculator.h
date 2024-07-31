@@ -1,3 +1,4 @@
+#inlcude <stdio.h>
 #inlcude <string.h>
 #include <stdlib.h>
 
@@ -19,3 +20,18 @@ int Check_InputIsNegative(int value){
     }
 }
 
+void ExtractCustomDelimiter(const char* input, char* delimiter) {
+    int i = 2; 
+    delimiter[0] = '\0';
+    while (input[i] != '\0' && input[i] != '\n') {
+        strncat(delimiter, &input[i], 1);
+        i++;
+    }
+}
+void HasCustomDelimiter(const char* input, char* delimiter) {
+    if (input[0] == '/' && input[1] == '/'){
+        ExtractCustomDelimiter(input, delimiter);
+    }
+    else
+         strcpy(delimiter, ",\n");
+}
