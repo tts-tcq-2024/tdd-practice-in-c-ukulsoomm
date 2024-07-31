@@ -41,7 +41,9 @@ int CalculateSum(const char* input, const char* delimiter){
     char* CopiedInput = strdup(input); 
     char* InputSegment = strtok(CopiedInput, delimiter);
     while (InputSegment != NULL) {
-        sum += InputLessThan1000(InputSegment);
+        int Input = atoi(InputSegment);
+        Check_InputIsNegative(Input);
+        sum += InputLessThan1000(Input);
         InputSegment = strtok(NULL, delimiter);
     }
     free(CopiedInput); 
