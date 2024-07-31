@@ -4,10 +4,7 @@
 #include <stdexcept>
 
 int EmptyStringInput(const char* input){
-  if(input == NULL  || input[0] == '\0' ) { 
-    return 0;
-  }
-  return -1; 
+   return (input == NULL || input[0] == '\0');
 }
 
 int InputLessThan1000(int input) {
