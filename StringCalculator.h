@@ -1,5 +1,5 @@
-#inlcude <stdio.h>
-#inlcude <string.h>
+#include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 
 int EmptyStringInput(const char* input){
