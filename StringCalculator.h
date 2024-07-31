@@ -8,9 +8,6 @@ int Add_EmptyStringInput(const char* input){
   return -1; 
 }
 
-int Add_GreaterThan1000Input(const char* input){
-  if(atoi(input) > 1000){
-    return input;
-  }
-  return 0;
+int Add_InputLessThan1000(int input){
+  return (input < 1000) ? input : 0;
 }
