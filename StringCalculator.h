@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stdexcept>
 
 int EmptyStringInput(const char* input){
   if(input == NULL  || input[0] == '\0' ) { 
@@ -47,5 +48,15 @@ int CalculateSum(const char* input, const char* delimiter){
         InputSegment = strtok(NULL, delimiter);
     }
     free(CopiedInput); 
+    return sum;
+}
+
+int add(const char* input) {
+    char delimiter[20];
+    if (EmptyStringInput(input)) {
+        return 0;
+    }
+    HasCustomDelimiter(input, delimiter);
+    int sum = CalculateSum(input, delimiter);
     return sum;
 }
