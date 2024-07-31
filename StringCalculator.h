@@ -35,3 +35,15 @@ void HasCustomDelimiter(const char* input, char* delimiter) {
     else
          strcpy(delimiter, ",\n");
 }
+
+int CalculateSum(const char* input, const char* delimiter){
+    int sum = 0;
+    char* CopiedInput = strdup(input); 
+    char* InputSegment = strtok(CopiedInput, delimiter);
+    while (InputSegment != NULL) {
+        sum += InputLessThan1000(InputSegment);
+        InputSegment = strtok(NULL, delimiter);
+    }
+    free(CopiedInput); 
+    return sum;
+}
