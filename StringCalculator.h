@@ -10,9 +10,8 @@ int EmptyStringInput(const char* input){
   return -1; 
 }
 
-int InputLessThan1000(const char* input){
-  int value = atoi(input);
-  return (value < 1000) ? value : 0;
+int InputLessThan1000(int input) {
+    return (input < 1000) ? input : 0;
 }
 
 int Check_InputIsNegative(int value){
